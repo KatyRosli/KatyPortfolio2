@@ -1,3 +1,11 @@
+import React from 'react';
+
 export function Home() {
-    return <h1>Home Page</h1>;
+    return (
+    <header>
+      <h1>Hi, <br/> I'm Katy Rosli.</h1>
+      <p>I'm a Frontend Developer, based in Stockholm. If you like my works and have a project
+        that you need coded, please don't hesitate to contact me.</p>
+    </header>
+    );
   }
