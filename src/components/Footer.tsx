@@ -1,3 +1,10 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 export function Footer() {
-    return <h1>Footer</h1>;
+    return (
+      <footer>
+        <hr />
+      </footer>
+    ) 
   }

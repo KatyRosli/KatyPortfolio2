@@ -6,6 +6,7 @@ import { Portfolio } from './pages/Portfolio';
 import { Resume } from './pages/Resume';
 import { Contact } from './pages/Contact';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
   return (

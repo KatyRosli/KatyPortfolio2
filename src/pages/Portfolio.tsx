@@ -7,10 +7,10 @@ import Row from 'react-bootstrap/Row';
 export function Portfolio() {
     return ( 
     <section>
-      <h2>Portfolio</h2>
-      <Row xs={1} md={2} className='g-4'>
-        {Array.from({ length: 4 }).map((_, idx) => (
-          <Col>
+      <h2> Portfolio </h2>
+      <Row xs={1} md={3} className='g-4'>
+        {Array.from({ length: 6 }).map((_, idx) => (
+          <Col key={idx}>
           <Card>
             <Card.Img variant='top' src='holder.js/100px160' />
             <Card.Body>
