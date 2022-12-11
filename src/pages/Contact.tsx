@@ -11,12 +11,10 @@ export function Contact() {
         <Form.Label>Name</Form.Label> <br />
         <Form.Control type="name" placeholder="Enter name" />
       </Form.Group>
-
       <Form.Group className="mb-3" controlId="formEmail">
         <Form.Label>Email address</Form.Label> <br />
         <Form.Control type="email address" placeholder="Email address" />
       </Form.Group>
-
       <Form.Group className="mb-3" controlId="formMessage">
         <Form.Label>Enter message here</Form.Label> <br />
         <Form.Control type="message" placeholder="Message" />
