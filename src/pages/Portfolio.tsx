@@ -5,8 +5,9 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 export function Portfolio() {
+  // list
     return ( 
-    <section>
+    <section id='portfolio'>
       <h2> Portfolio </h2>
       <Row xs={1} md={3} className='g-4'>
         {Array.from({ length: 6 }).map((_, idx) => (

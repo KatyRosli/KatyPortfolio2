@@ -12,7 +12,7 @@ export function Resume() {
           <h2> Resume </h2>
           <p>My BA Hons in Communication Design from The Glasgow School of Art, <br /> allows me to develop digital products through research and design.</p>
           <p>With 6 plus years as a UX/UI Designer, I decided to move forward to the Tech world as a Frontend Developer. <br /> 
-          I'm currently a Consultant Frontend Developer, based in Stockholm, Sweden. Feel free to view and download my resume and my tech stack.</p>
+          I'm currently a Consultant Frontend Developer, based in Stockholm, Sweden. Feel free to view my resume and my tech stack.</p>
           <Button>
           View Resume
           </Button>
