@@ -1,39 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Hind:wght@300;400;500;600;700&display=swap');
 
-.App {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --header-font: 'Expletus Sans', cursive;
+  --body-font: 'Hind', sans-serif;
+  --background-color: #070707;
+  --primary-color: linear-gradient(70deg, rgba(47,9,104,1) 0%, rgba(105,29,210,1) 100%);
+  --secondary-color: #D8BDFF;
+  --warning-color: #D21D1D;
+  --text-color: #FBFBFB;
+}
+
+#bootstrap-overrides {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+#bootstrap-overrides .navbar {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: inline;
+  height: 48px;
+  position: sticky;
+  top: 0px;
+}
+
+#bootstrap-overrides ul, ol {
+  list-style: none;
+  flex-direction: row;
+  margin-left: auto;
+  overflow-x: hidden;
+  white-space: nowrap;
+  display: inline;
+}
+
+#bootstrap-overrides li {
+  text-decoration: none;
+  font-size: 16px;
+  display: inline;
+  font-size: 16px;
+}
+
+#bootstrap-overrides .navbar__logo {
+  color: var(--text-color);
+  font-family: var(--header-font);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 16px 16px 8px 16px;
+}
+
+#bootstrap-overrides .navbar__items {
+  justify-content: flex-end;
+}
+
+#bootstrap-overrides .navbar__items__link {
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-weight: 400;
+  text-decoration: none;
+  padding: 16px 16px 8px 16px;
+}
+
+#bootstrap-overrides .card {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+#bootstrap-overrides h1 {
+  font-family: var(--header-font);
   text-align: center;
+  padding-top: 64px;
+  font-size: 48px;
+  font-weight: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#bootstrap-overrides h2 {
+  font-family: var(--body-font);
+  text-align: center;
+  padding-top: 8px;
+  margin-bottom: 0px;
+  font-size: 24px;
+  font-weight: 400;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#bootstrap-overrides p {
+  font-family: var(--body-font);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+#bootstrap-overrides .button-header{
+  item-align: center;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
