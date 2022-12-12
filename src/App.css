@@ -9,15 +9,17 @@
 :root {
   --header-font: 'Expletus Sans', cursive;
   --body-font: 'Hind', sans-serif;
-  --background-color: #070707;
+  --background-color: linear-gradient(70deg, rgba(2,2,6,1) 0%, rgba(23,21,84,1) 100%);;
   --primary-color: linear-gradient(70deg, rgba(47,9,104,1) 0%, rgba(105,29,210,1) 100%);
+  --primary-hover: #691DD2;
   --secondary-color: #D8BDFF;
   --warning-color: #D21D1D;
   --text-color: #FBFBFB;
+  --border-color: #2C2C2C;
 }
 
 #bootstrap-overrides {
-  background-color: var(--background-color);
+  background: var(--background-color);
   color: var(--text-color);
 }
 
@@ -28,6 +30,13 @@
   height: 48px;
   position: sticky;
   top: 0px;
+  border: none;
+}
+
+#bootstrap-overrides .navbar__container {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
 }
 
 #bootstrap-overrides ul, ol {
@@ -35,8 +44,6 @@
   flex-direction: row;
   margin-left: auto;
   overflow-x: hidden;
-  white-space: nowrap;
-  display: inline;
 }
 
 #bootstrap-overrides li {
@@ -55,6 +62,9 @@
 }
 
 #bootstrap-overrides .navbar__items {
+  border: none;
+  display: flex;
+  flex-direction: row;
   justify-content: flex-end;
 }
 
@@ -71,31 +81,396 @@
   color: var(--text-color);
 }
 
-#bootstrap-overrides h1 {
-  font-family: var(--header-font);
+#bootstrap-overrides .header {
   text-align: center;
+  padding: 40px 0 80px 0;
+}
+
+#bootstrap-overrides .header__title {
+  font-family: var(--header-font);
   padding-top: 64px;
   font-size: 48px;
   font-weight: 700;
 }
 
-#bootstrap-overrides h2 {
+#bootstrap-overrides .header__body {
   font-family: var(--body-font);
-  text-align: center;
   padding-top: 8px;
-  margin-bottom: 0px;
+  margin-bottom: 4px;
   font-size: 24px;
   font-weight: 400;
 }
 
-#bootstrap-overrides p {
+#bootstrap-overrides .header__content {
   font-family: var(--body-font);
-  text-align: center;
   font-size: 16px;
   font-weight: 400;
 }
 
-#bootstrap-overrides .button-header{
-  item-align: center;
+#bootstrap-overrides .button__text {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 16px;
+  font-family: var(--body-font);
+  font-weight: 500;
+}
 
+#bootstrap-overrides .header__button--primary {
+  border: none;
+  border-radius: 40px;
+  outline: none;
+  background: #020206;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  margin-top: 8px;
+  padding: 8px 16px 8px 16px;
+}
+
+#bootstrap-overrides .header__button--primary:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  padding: 8px 16px 8px 16px;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 40px;
+  opacity: 1;
+}
+
+#bootstrap-overrides .header__button--primary:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background: #020206;
+  left: 0;
+  top: 0;
+  padding: 8px 16px 8px 16px;
+  border-radius: 40px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+#bootstrap-overrides .portfolio__title, .form__title {
+  font-family: var(--header-font);
+  padding: 72px 0 24px 0;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+#bootstrap-overrides .card {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+#bootstrap-overrides .card__body { 
+  padding: 16px 16px 24px 16px;
+}
+
+#bootstrap-overrides .card__title { 
+  font-family: var(--body-font);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+#bootstrap-overrides .card__tags { 
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#bootstrap-overrides .card__buttons { 
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: none;
+  padding: 8px 0 8px 0;
+  font-family: var(--body-font);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+#bootstrap-overrides .card__button--primary {
+  background: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 40px;
+  padding: 8px 16px 8px 16px;
+  cursor: pointer;
+  border: none;
+  transition-duration: 0.3s;
+}
+
+#bootstrap-overrides .card__button--primary:hover {
+  background: var(--primary-hover);
+  color: var(--text-color);
+  border-radius: 40px;
+  padding: 8px 16px 8px 16px;
+  cursor: pointer;
+  border: none;
+}
+
+#bootstrap-overrides .card__button--secondary {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  border-radius: 40px;
+  padding: 8px 16px 8px 16px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+#bootstrap-overrides .card__button--secondary:hover {
+  background: var(--secondary-color);
+  color: var(--border-color);
+  border-radius: 40px;
+  padding: 8px 16px 8px 16px;
+  cursor: pointer;
+}
+
+#bootstrap-overrides .resume__container {
+  text-align: center;
+  padding: 40px 0 40px 0;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+#bootstrap-overrides .resume__title {
+  font-family: var(--header-font);
+  padding: 48px 0 24px 0;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+#bootstrap-overrides .resume__body {
+  font-family: var(--body-font);
+  padding-bottom: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
+#bootstrap-overrides .resume__button--primary {
+  background: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 40px;
+  cursor: pointer;
+  border: none;
+  padding: 8px 16px 8px 16px;
+  transition-duration: 0.3s;
+  width: 130px;
+  margin: auto;
+}
+
+#bootstrap-overrides .resume__button--primary:hover {
+  background: var(--primary-hover);
+  color: var(--text-color);
+  border-radius: 40px;
+  padding: 8px 16px 8px 16px;
+  cursor: pointer;
+  border: none;
+}
+
+#bootstrap-overrides .techstack__title {
+  font-family: var(--body-font);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+#bootstrap-overrides .techstack__body {
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#bootstrap-overrides .form__body {
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}
+
+#bootstrap-overrides .form__label {
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}
+
+#bootstrap-overrides .form__control {
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--border-color);
+}
+
+#bootstrap-overrides .form__control:focus {
+  border-color: var(--secondary-color);
+}
+
+#bootstrap-overrides .form__message {
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--border-color);
+  height: 80px;
+  line-height: 16px;
+}
+
+#bootstrap-overrides .contact__button--primary {
+  background: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 40px;
+  cursor: pointer;
+  border: none;
+  padding: 8px 16px 8px 16px;
+  transition-duration: 0.3s;
+}
+
+#bootstrap-overrides .contact__button--primary:hover {
+  background: var(--primary-hover);
+  color: var(--text-color);
+  border-radius: 40px;
+  padding: 8px 16px 8px 16px;
+  cursor: pointer;
+  border: none;
+}
+
+#bootstrap-overrides .form {
+  margin-bottom: 56px;
+}
+
+#bootstrap-overrides .footer {
+  padding: 56px 0 88px 0;
+}
+
+#bootstrap-overrides .footer__line {
+  color: var(--text-color);
+}
+
+#bootstrap-overrides .container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 24px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#bootstrap-overrides .copyrights {
+  text-align: center;
+  font-family: var(--body-font);
+  font-size: 12px;
+  font-weight: 300;
+}
+
+@media (min-width: 320px) {
+  #bootstrap-overrides {
+    padding: 0 16px 0 16px;
+  }
+  #bootstrap-overrides .navbar__logo {
+    color: var(--text-color);
+    font-family: var(--header-font);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  #bootstrap-overrides .resume__container {
+    text-align: center;
+    padding: 40px 0 40px 0;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  #bootstrap-overrides {
+    padding: 0 24px 0 24px;
+  }
+  #bootstrap-overrides .navbar__logo {
+    color: var(--text-color);
+    font-family: var(--header-font);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 8px;
+  }
+  #bootstrap-overrides .resume__container {
+    text-align: center;
+    padding: 40px 0 40px 0;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+  #bootstrap-overrides .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+  #bootstrap-overrides .form__control {
+    width: 600px;
+  }
+  #bootstrap-overrides .form__message {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #bootstrap-overrides {
+    padding: 0 136px 0 136px;
+  }
+  #bootstrap-overrides .navbar__logo {
+    color: var(--text-color);
+    font-family: var(--header-font);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 8px;
+  }
+  #bootstrap-overrides .resume__container {
+    text-align: center;
+    padding: 40px 0 40px 0;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+  #bootstrap-overrides .contact__button--primary {
+    background: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 40px;
+    cursor: pointer;
+    border: none;
+    padding: 8px 16px 8px 16px;
+    transition-duration: 0.3s;
+    width: 140px;
+    margin: auto;
+  }
 }

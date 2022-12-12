@@ -6,7 +6,7 @@ export function NavBar() {
     return (
         <nav className='navbar'>
             <ul className='navbar__container'>
-            <li><NavLink className='navbar__logo' to='/'>Katy Rosli</NavLink></li>
+            <li><NavLink className='navbar__logo' to='/'>Katy</NavLink></li>
             <ol className='navbar__items'>
             <li><HashLink className='navbar__items__link' to='/#portfolio'
             scroll={(el:any) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}>Portfolio</HashLink></li>
