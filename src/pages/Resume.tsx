@@ -13,7 +13,7 @@ export function Resume() {
     },
     {
       title: 'Frontend:',
-      body: 'React, Redux, jQuery, Bootstrap',
+      body: 'React, Redux, NextJs, jQuery, Bootstrap',
       title2: 'Test:',
       body2: 'Mocha, Jest',
     },
@@ -26,7 +26,7 @@ export function Resume() {
     window.open(url, '_blank', 'noreferrer');
   };
     return (
-      <section className='resume'>
+      <section className='resume' id='resume'>
         <aside className='resume__container'>
           <h2 className='resume__title'>Resume</h2>
           <p className='resume__body'>My BA Hons in Communication Design from The Glasgow School of Art, allows me to develop digital products through research and design. With 6 plus years as a UX/UI Designer, I decided to move forward to the Tech world as a Frontend Developer. <br /> 

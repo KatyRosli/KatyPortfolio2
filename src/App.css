@@ -332,13 +332,23 @@
   border-color: var(--secondary-color);
 }
 
-#bootstrap-overrides .form__message {
+#bootstrap-overrides textarea {
+  width: 600px;
+  height: 150px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--text-color);
+  resize: none;
   font-family: var(--body-font);
   font-weight: 400;
   font-size: 16px;
   color: var(--border-color);
-  height: 80px;
-  line-height: 16px;
+}
+
+#bootstrap-overrides textarea:focus {
+  border-color: var(--secondary-color);
 }
 
 #bootstrap-overrides .contact__button--primary {
@@ -406,6 +416,11 @@
     justify-content: center;
     margin: auto;
   }
+  #bootstrap-overrides .contact__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 }
 
 @media (min-width: 768px) {
@@ -437,8 +452,31 @@
   #bootstrap-overrides .form__control {
     width: 600px;
   }
-  #bootstrap-overrides .form__message {
+  #bootstrap-overrides textarea {
     width: 600px;
+  }
+  #bootstrap-overrides .form__label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0 0 0 88px;
+  }
+  #bootstrap-overrides .form__control {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0 0 0 88px;
+  }
+  #bootstrap-overrides textarea {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0 0 0 88px;
+  }
+  #bootstrap-overrides .contact__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
@@ -472,5 +510,28 @@
     transition-duration: 0.3s;
     width: 140px;
     margin: auto;
+  }
+  #bootstrap-overrides .form__label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0 220px 0 220px;
+  }
+  #bootstrap-overrides .form__control {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0 220px 0 220px;
+  }
+  #bootstrap-overrides textarea {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0 220px 0 220px;
+  }
+  #bootstrap-overrides .contact__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
