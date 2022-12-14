@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import { Contact } from './Contact';
+import { Contact } from '../Contact/Contact';
 
 export function Resume() {
   const techStack = [

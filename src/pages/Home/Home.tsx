@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import { Portfolio } from './Portfolio';
+import { Portfolio } from '../Portfolio/Portfolio';
 import { HashLink } from 'react-router-hash-link';
 
 export function Home() {

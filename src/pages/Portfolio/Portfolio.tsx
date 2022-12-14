@@ -3,11 +3,11 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import ReactJsCalculatorApp from '../assets/images/ReactJsCalculatorApp.svg';
-import ReactJsDictionaryApp from '../assets/images/ReactJsDictionaryApp.svg';
-import ReactJsWeatherApp from '../assets/images/ReactJsWeatherApp.svg';
-import VanillaJsWeatherApp from '../assets/images/VanillaJsWeatherApp.svg';
-import OnlinePortfolio from '../assets/images/OnlinePortfolio.svg';
+import ReactJsCalculatorApp from '../../assets/images/ReactJsCalculatorApp.svg';
+import ReactJsDictionaryApp from '../../assets/images/ReactJsDictionaryApp.svg';
+import ReactJsWeatherApp from '../../assets/images/ReactJsWeatherApp.svg';
+import VanillaJsWeatherApp from '../../assets/images/VanillaJsWeatherApp.svg';
+import OnlinePortfolio from '../../assets/images/OnlinePortfolio.svg';
 
 export function Portfolio() {
   const projects = [
