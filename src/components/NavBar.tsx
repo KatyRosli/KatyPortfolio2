@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 export function NavBar() {
+    const [navbar, setNavbar] = useState(false);
+
+    const changeBackground = () => {
+      console.log(window.scrollY)
+      if (window.scrollY >= 56) {
+        setNavbar(true)
+      } else {
+        setNavbar(false)
+      }
+    }
+  
+    useEffect(() => {
+      changeBackground()
+      window.addEventListener("scroll", changeBackground)
+    })
     return (
-        <nav className='navbar'>
+        <nav className={navbar ? 'navbar__active' : 'navbar'}>
             <ul className='navbar__container'>
             <li><NavLink className='navbar__logo' to='/'>Katy</NavLink></li>
             <ol className='navbar__items'>

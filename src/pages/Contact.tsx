@@ -28,7 +28,7 @@ export function Contact() {
       </Form.Group>
       <Form.Group className='mb-3' controlId="formEmail">
         <Form.Label className='form__label'>Email address</Form.Label>
-        <Form.Control className='form__control' type="email address" placeholder="Enter email address" name='user_email' pattern='.+@globex\.com' required/>
+        <Form.Control className='form__control' type="email address" placeholder="Enter email address" name='user_email' required/>
       </Form.Group>
       <Form.Group className='mb-3' controlId="formMessage">
         <Form.Label className='form__label'>Message</Form.Label>

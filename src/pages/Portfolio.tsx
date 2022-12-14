@@ -61,11 +61,11 @@ export function Portfolio() {
     window.open(url, '_blank', 'noreferrer');
   };
   return (
-    <section className='portfolio' id='portfolio'>
+    <section className='portfolio'>
       <h2 className='portfolio__title'>Portfolio</h2>
       <Row xs={1} md={2} lg={3} className='g-4'>
         {projects.map((element, idx) => (
-          <Col key={idx}>
+          <Col id='portfolio' key={idx}>
           <Card className='card'>
             <Card.Img className='card__image' variant='top' src={element.image}/>
             <Card.Body className='card__body'>

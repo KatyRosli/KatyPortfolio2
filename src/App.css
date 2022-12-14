@@ -7,9 +7,10 @@
 }
 
 :root {
-  --header-font: 'Expletus Sans', cursive;
+  --header-font: 'Expletus Sans', sans-serif;
   --body-font: 'Hind', sans-serif;
-  --background-color: linear-gradient(70deg, rgba(2,2,6,1) 0%, rgba(23,21,84,1) 100%);;
+  --background-color: linear-gradient(70deg, rgba(2,2,6,1) 0%, rgba(23,21,84,1) 100%);
+  --nav-color: #070707;
   --primary-color: linear-gradient(70deg, rgba(47,9,104,1) 0%, rgba(105,29,210,1) 100%);
   --primary-hover: #691DD2;
   --secondary-color: #D8BDFF;
@@ -24,19 +25,37 @@
 }
 
 #bootstrap-overrides .navbar {
-  background-color: var(--background-color);
   color: var(--text-color);
   display: inline;
-  height: 48px;
-  position: sticky;
-  top: 0px;
   border: none;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  padding: 16px 0 16px 0;
+  transition: .3s ease-in;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#bootstrap-overrides .navbar__active {
+  background: var(--nav-color);
+  color: var(--text-color);
+  display: inline;
+  border: none;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  padding: 16px 0 16px 0;
+  transition: .3s ease-in;
+  overflow: hidden;
+  z-index: 1;
 }
 
 #bootstrap-overrides .navbar__container {
   display: flex;
   justify-content: center;
-  padding: 24px;
+  padding: 0;
+  margin: 0;
 }
 
 #bootstrap-overrides ul, ol {
@@ -50,7 +69,6 @@
   text-decoration: none;
   font-size: 16px;
   display: inline;
-  font-size: 16px;
 }
 
 #bootstrap-overrides .navbar__logo {
@@ -58,7 +76,7 @@
   font-family: var(--header-font);
   font-weight: 700;
   text-decoration: none;
-  padding: 16px 16px 8px 16px;
+  padding: 8px 16px 8px 16px;
 }
 
 #bootstrap-overrides .navbar__items {
@@ -73,7 +91,11 @@
   font-family: var(--body-font);
   font-weight: 400;
   text-decoration: none;
-  padding: 16px 16px 8px 16px;
+  padding: 8px 16px 8px 16px;
+}
+
+#bootstrap-overrides .navbar__items__link:hover {
+  color: var(--secondary-color);
 }
 
 #bootstrap-overrides .card {
@@ -83,7 +105,7 @@
 
 #bootstrap-overrides .header {
   text-align: center;
-  padding: 40px 0 80px 0;
+  padding: 200px 0 80px 0;
 }
 
 #bootstrap-overrides .header__title {
@@ -258,7 +280,7 @@
 
 #bootstrap-overrides .resume__title {
   font-family: var(--header-font);
-  padding: 48px 0 24px 0;
+  padding: 80px 0 24px 0;
   font-size: 32px;
   font-weight: 700;
   text-align: center;
@@ -374,10 +396,6 @@
   margin-bottom: 56px;
 }
 
-#bootstrap-overrides .footer {
-  padding: 56px 0 88px 0;
-}
-
 #bootstrap-overrides .footer__line {
   color: var(--text-color);
 }
@@ -398,7 +416,7 @@
 }
 
 @media (min-width: 320px) {
-  #bootstrap-overrides {
+  #bootstrap-overrides main {
     padding: 0 16px 0 16px;
   }
   #bootstrap-overrides .navbar__logo {
@@ -406,6 +424,9 @@
     font-family: var(--header-font);
     font-weight: 700;
     text-decoration: none;
+  }
+  #bootstrap-overrides .resume {
+    padding: 0 16px 0 16px;
   }
   #bootstrap-overrides .resume__container {
     text-align: center;
@@ -421,10 +442,13 @@
     flex-direction: row;
     justify-content: flex-end;
   }
+  #bootstrap-overrides .footer {
+    padding: 56px 16px 88px 16px;
+  }
 }
 
 @media (min-width: 768px) {
-  #bootstrap-overrides {
+  #bootstrap-overrides main {
     padding: 0 24px 0 24px;
   }
   #bootstrap-overrides .navbar__logo {
@@ -433,6 +457,12 @@
     font-weight: 700;
     text-decoration: none;
     padding: 8px;
+  }
+  #bootstrap-overrides .header__button--primary {
+    margin: 8px 0 184px 0;
+  }
+  #bootstrap-overrides .resume {
+    padding: 0 24px 0 24px;
   }
   #bootstrap-overrides .resume__container {
     text-align: center;
@@ -478,10 +508,16 @@
     flex-direction: row;
     justify-content: center;
   }
+  #bootstrap-overrides .footer {
+    padding: 56px 24px 88px 24px;
+  }
 }
 
 @media (min-width: 1024px) {
-  #bootstrap-overrides {
+  #bootstrap-overrides main {
+    padding: 0 136px 0 136px;
+  }
+  #bootstrap-overrides .navbar__container {
     padding: 0 136px 0 136px;
   }
   #bootstrap-overrides .navbar__logo {
@@ -490,6 +526,12 @@
     font-weight: 700;
     text-decoration: none;
     padding: 8px;
+  }
+  #bootstrap-overrides .header__button--primary {
+    margin: 8px 0 1px 0;
+  }
+  #bootstrap-overrides .resume {
+    padding: 0 136px 0 136px;
   }
   #bootstrap-overrides .resume__container {
     text-align: center;
@@ -533,5 +575,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+  }
+  #bootstrap-overrides .footer {
+    padding: 56px 136px 88px 136px;
   }
 }
