@@ -445,6 +445,12 @@
   #bootstrap-overrides .footer {
     padding: 56px 16px 88px 16px;
   }
+  #bootstrap-overrides textarea {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 343px;
+  }
 }
 
 @media (min-width: 768px) {
