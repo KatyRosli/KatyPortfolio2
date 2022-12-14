@@ -13,6 +13,7 @@ export function Portfolio() {
   const projects = [
     {
       image: ReactJsCalculatorApp,
+      alt: 'React Calculator App',
       title: 'React Calculator App',
       tags: 'React Js, JavaScript, HTML, CSS: Animations & Bootstrap, Netlify',
       button: 'Visit Github',
@@ -22,6 +23,7 @@ export function Portfolio() {
     },
     {
       image: ReactJsDictionaryApp,
+      alt: 'React Dictionary App',
       title: 'React Dictionary App',
       tags: 'React Js, JavaScript, HTML, CSS: Bootstrap, Netlify, External API: (Dictionary API)',
       button: 'Visit Github',
@@ -31,6 +33,7 @@ export function Portfolio() {
     },
     {
       image: ReactJsWeatherApp,
+      alt: 'React Weather App',
       title: 'React Weather App',
       tags: 'React Js, JavaScript, HTML, CSS: Animations & Bootstrap, Netlify, External API: (Weather API)',
       button: 'Visit Github',
@@ -40,6 +43,7 @@ export function Portfolio() {
     },
     {
       image: VanillaJsWeatherApp,
+      alt: 'Vanilla Js Weather App',
       title: 'Vanilla Js Weather App',
       tags: 'Vanilla JavaScript, HTML, CSS: Bootstrap, Netlify, External API: (Weather API)',
       button: 'Visit Github',
@@ -49,6 +53,7 @@ export function Portfolio() {
     },
     {
       image: OnlinePortfolio,
+      alt: 'Online Portfolio',
       title: 'Online Portfolio',
       tags: 'React Tsx, TypeScript, HTML, CSS: Bootstrap, AWS',
       button: 'Visit Github',
@@ -67,7 +72,7 @@ export function Portfolio() {
         {projects.map((element, idx) => (
           <Col id='portfolio' key={idx}>
           <Card className='card'>
-            <Card.Img className='card__image' variant='top' src={element.image}/>
+            <Card.Img className='card__image' variant='top' src={element.image} alt={element.alt}/>
             <Card.Body className='card__body'>
               <Card.Title className='card__title'>{element.title}</Card.Title>
               <Card.Text className='card__tags'>{element.tags}</Card.Text>
