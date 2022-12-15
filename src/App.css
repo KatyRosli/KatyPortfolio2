@@ -9,7 +9,7 @@
 :root {
   --header-font: 'Expletus Sans', sans-serif;
   --body-font: 'Hind', sans-serif;
-  --background-color: linear-gradient(70deg, rgba(2,2,6,1) 0%, rgba(23,21,84,1) 100%);
+  --background-color: #0C0B2A;
   --nav-color: #070707;
   --primary-color: linear-gradient(70deg, rgba(47,9,104,1) 0%, rgba(105,29,210,1) 100%);
   --primary-hover: #691DD2;
@@ -202,6 +202,11 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+}
+
+#bootstrap-overrides .card__body { 
+  border-radius: 0;
+  height: 80%;
 }
 
 #bootstrap-overrides .card__body { 

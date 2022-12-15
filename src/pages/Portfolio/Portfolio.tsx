@@ -1,18 +1,27 @@
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import ReactJsCalculatorApp from '../../assets/images/ReactJsCalculatorApp.svg';
-import ReactJsDictionaryApp from '../../assets/images/ReactJsDictionaryApp.svg';
-import ReactJsWeatherApp from '../../assets/images/ReactJsWeatherApp.svg';
-import VanillaJsWeatherApp from '../../assets/images/VanillaJsWeatherApp.svg';
-import OnlinePortfolio from '../../assets/images/OnlinePortfolio.svg';
+import ReactJsCalculatorApp from '../../assets/images/ReactJsCalculatorApp.png';
+import TinyReactJsCalculatorApp from '../../assets/images/TinyReactJsCalculatorApp.jpg';
+import ReactJsDictionaryApp from '../../assets/images/ReactJsDictionaryApp.png';
+import TinyReactJsDictionaryApp from '../../assets/images/TinyReactJsDictionaryApp.jpg';
+import ReactJsWeatherApp from '../../assets/images/ReactJsWeatherApp.png';
+import TinyReactJsWeatherApp from '../../assets/images/TinyReactJsWeatherApp.jpg';
+import VanillaJsWeatherApp from '../../assets/images/VanillaJsWeatherApp.png';
+import TinyVanillaJsWeatherApp from '../../assets/images/TinyVanillaJsWeatherApp.jpg';
+import OnlinePortfolio from '../../assets/images/OnlinePortfolio.png';
+import TinyOnlinePortfolio from '../../assets/images/TinyOnlinePortfolio.jpg';
+
 
 export function Portfolio() {
   const projects = [
     {
       image: ReactJsCalculatorApp,
+      tiny: TinyReactJsCalculatorApp,
       alt: 'React Calculator App',
       title: 'React Calculator App',
       tags: 'React Js, JavaScript, HTML, CSS: Animations & Bootstrap, Netlify',
@@ -23,6 +32,7 @@ export function Portfolio() {
     },
     {
       image: ReactJsDictionaryApp,
+      tiny: TinyReactJsDictionaryApp,
       alt: 'React Dictionary App',
       title: 'React Dictionary App',
       tags: 'React Js, JavaScript, HTML, CSS: Bootstrap, Netlify, External API: (Dictionary API)',
@@ -33,6 +43,7 @@ export function Portfolio() {
     },
     {
       image: ReactJsWeatherApp,
+      tiny: TinyReactJsWeatherApp,
       alt: 'React Weather App',
       title: 'React Weather App',
       tags: 'React Js, JavaScript, HTML, CSS: Animations & Bootstrap, Netlify, External API: (Weather API)',
@@ -43,6 +54,7 @@ export function Portfolio() {
     },
     {
       image: VanillaJsWeatherApp,
+      tiny: TinyVanillaJsWeatherApp,
       alt: 'Vanilla Js Weather App',
       title: 'Vanilla Js Weather App',
       tags: 'Vanilla JavaScript, HTML, CSS: Bootstrap, Netlify, External API: (Weather API)',
@@ -53,6 +65,7 @@ export function Portfolio() {
     },
     {
       image: OnlinePortfolio,
+      tiny: TinyOnlinePortfolio,
       alt: 'Online Portfolio',
       title: 'Online Portfolio',
       tags: 'React Tsx, TypeScript, HTML, CSS: Bootstrap, AWS',
@@ -65,6 +78,7 @@ export function Portfolio() {
   const openInNewTab = (url:string) => {
     window.open(url, '_blank', 'noreferrer');
   };
+
   return (
     <section className='portfolio'>
       <h2 className='portfolio__title'>Portfolio</h2>
@@ -72,7 +86,11 @@ export function Portfolio() {
         {projects.map((element, idx) => (
           <Col id='portfolio' key={idx}>
           <Card className='card'>
-            <Card.Img className='card__image' variant='top' src={element.image} alt={element.alt}/>
+            <Card.Body className='card__container'>
+              <Row>
+            <LazyLoadImage className='img-fluid' variant='top' src={element.image} alt={element.alt} placeholderSrc={element.tiny} effect='blur'/> 
+              </Row>
+              </Card.Body>
             <Card.Body className='card__body'>
               <Card.Title className='card__title'>{element.title}</Card.Title>
               <Card.Text className='card__tags'>{element.tags}</Card.Text>
