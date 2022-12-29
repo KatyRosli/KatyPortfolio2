@@ -5,17 +5,17 @@ import Button from 'react-bootstrap/Button';
 
 
 export function Contact() {
-  const form = useRef<HTMLFormElement | null>(null);
+  const form = useRef<null | HTMLFormElement>(null);
 
-  const sendEmail = (e:any) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs.sendForm('service_ljqlf28', 'template_fye02wi', form.current, 't_lIr25-4DnNdT2bQ')
-      .then((result:any) => {
-          console.log(result.text);
+      .then((result: unknown) => {
+          console.log((result as {text: string;}).text);
           console.log('message sent');
-      }, (error:any) => {
-          console.log(error.text);
+      }, (error: unknown) => {
+          console.log((error as {text: string;}).text);
       });
   };
   return (

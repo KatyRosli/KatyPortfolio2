@@ -23,10 +23,10 @@ export function NavBar() {
             <li><NavLink className='navbar__logo' to='/'>Katy</NavLink></li>
             <ol className='navbar__items'>
             <li><HashLink className='navbar__items__link' to='/#portfolio'
-            scroll={(el:any) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}>Portfolio</HashLink></li>
+            scroll={(el: HTMLElement) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}>Portfolio</HashLink></li>
             <li><NavLink className='navbar__items__link' to='/resume'>Resume</NavLink></li>
             <li><HashLink className='navbar__items__link' to='/resume#contact'
-            scroll={(el:any) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}>Contact</HashLink></li>
+            scroll={(el: HTMLElement) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}>Contact</HashLink></li>
             </ol>
             </ul>
         </nav>
