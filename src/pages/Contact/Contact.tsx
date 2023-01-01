@@ -9,7 +9,7 @@ export function Contact() {
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+  
     emailjs.sendForm('service_ljqlf28', 'template_fye02wi', form.current, 't_lIr25-4DnNdT2bQ')
       .then((result: unknown) => {
           console.log((result as {text: string;}).text);
