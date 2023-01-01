@@ -18,7 +18,7 @@ export function Footer() {
             <BsBehance onClick={() => openInNewTab('https://www.behance.net/KatyLii')} />
             <BsInstagram onClick={() => openInNewTab('https://www.instagram.com/katy.rosli/')} />
           </Col>
-          <p className='copyrights'>© 2022 Katy Rosli</p>
+          <p className='copyrights'>© 2023 Katy Rosli</p>
       </footer>
     ) 
   };
