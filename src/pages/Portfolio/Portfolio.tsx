@@ -15,15 +15,15 @@ import VanillaJsWeatherApp from '../../assets/images/VanillaJsWeatherApp.png';
 import TinyVanillaJsWeatherApp from '../../assets/images/TinyVanillaJsWeatherApp.jpg';
 import OnlinePortfolio from '../../assets/images/OnlinePortfolio.png';
 import TinyOnlinePortfolio from '../../assets/images/TinyOnlinePortfolio.jpg';
-import MusicPlayer from '../../assets/images/MusicPlayerTsxApp.png';
-import TinyMusicPlayer from '../../assets/images/TinyMusicPlayerTsxApp.jpg';
+import MusicPlayerApp from '../../assets/images/MusicPlayerTsxApp.png';
+import TinyMusicPlayerApp from '../../assets/images/TinyMusicPlayerTsxApp.jpg';
 
 
 export function Portfolio() {
   const projects = [
         {
-      image: MusicPlayer,
-      tiny: TinyMusicPlayer,
+      image: MusicPlayerApp,
+      tiny: TinyMusicPlayerApp,
       alt: 'Music Player',
       title: 'Music Player',
       tags: 'React Tsx, TypeScript, HTML, CSS, Netlify, SoundCloud',
