@@ -15,10 +15,23 @@ import VanillaJsWeatherApp from '../../assets/images/VanillaJsWeatherApp.png';
 import TinyVanillaJsWeatherApp from '../../assets/images/TinyVanillaJsWeatherApp.jpg';
 import OnlinePortfolio from '../../assets/images/OnlinePortfolio.png';
 import TinyOnlinePortfolio from '../../assets/images/TinyOnlinePortfolio.jpg';
+import MusicPlayer from '../../assets/images/MusicPlayerTsxApp.png';
+import TinyMusicPlayer from '../../assets/images/TinyMusicPlayerTsxApp.jpg';
 
 
 export function Portfolio() {
   const projects = [
+        {
+      image: MusicPlayer,
+      tiny: TinyMusicPlayer,
+      alt: 'Music Player',
+      title: 'Music Player',
+      tags: 'React Tsx, TypeScript, HTML, CSS, Netlify, SoundCloud',
+      button: 'Visit Github',
+      github: 'https://github.com/KatyRosli/musicplayer', 
+      button2: 'Visit Website',
+      website: 'https://beautiful-malasada-027c15.netlify.app/',
+    },
     {
       image: ReactJsCalculatorApp,
       tiny: TinyReactJsCalculatorApp,
