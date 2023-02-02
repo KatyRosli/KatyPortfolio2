@@ -24,8 +24,8 @@ export function Portfolio() {
         {
       image: MusicPlayerApp,
       tiny: TinyMusicPlayerApp,
-      alt: 'Music Player',
-      title: 'Music Player',
+      alt: 'Music Player App',
+      title: 'Music Player App',
       tags: 'React Tsx, TypeScript, HTML, CSS, Netlify, SoundCloud',
       button: 'Visit Github',
       github: 'https://github.com/KatyRosli/musicplayer', 
