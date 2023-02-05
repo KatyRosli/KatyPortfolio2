@@ -15,13 +15,15 @@ import VanillaJsWeatherApp from '../../assets/images/VanillaJsWeatherApp.png';
 import TinyVanillaJsWeatherApp from '../../assets/images/TinyVanillaJsWeatherApp.jpg';
 import OnlinePortfolio from '../../assets/images/OnlinePortfolio.png';
 import TinyOnlinePortfolio from '../../assets/images/TinyOnlinePortfolio.jpg';
+import TodoListApp from '../../assets/images/TodoListApp.png';
+import TinyTodoListApp from '../../assets/images/TinyTodoListApp.jpg';
 import MusicPlayerApp from '../../assets/images/MusicPlayerTsxApp.png';
 import TinyMusicPlayerApp from '../../assets/images/TinyMusicPlayerTsxApp.jpg';
 
 
 export function Portfolio() {
   const projects = [
-        {
+    {
       image: MusicPlayerApp,
       tiny: TinyMusicPlayerApp,
       alt: 'Music Player App',
@@ -31,6 +33,17 @@ export function Portfolio() {
       github: 'https://github.com/KatyRosli/musicplayer', 
       button2: 'Visit Website',
       website: 'https://beautiful-malasada-027c15.netlify.app/',
+    },
+        {
+      image: TodoListApp,
+      tiny: TinyTodoListApp,
+      alt: 'TodoList App',
+      title: 'TodoList App',
+      tags: 'React JS, JavaScript, HTML, CSS, Netlify, Jest',
+      button: 'Visit Github',
+      github: 'https://github.com/KatyRosli/TodoListApp', 
+      button2: 'Visit Website',
+      website: 'https://dreamy-belekoy-14f19e.netlify.app/',
     },
     {
       image: ReactJsCalculatorApp,
