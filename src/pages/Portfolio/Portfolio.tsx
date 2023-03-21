@@ -29,7 +29,7 @@ export function Portfolio() {
       tiny: TinyNextJsGeoGameApp,
       alt: 'Geo Game App',
       title: 'Geo Game App',
-      tags: 'React Js, TypeScript, HTML, SCSS, Netlify',
+      tags: 'React Js, TypeScript, HTML, SCSS, Netlify, Leaflet Js',
       button: 'Visit Github',
       github: 'https://github.com/KatyRosli/game', 
       button2: 'Visit Website',
