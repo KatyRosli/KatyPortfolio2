@@ -9,17 +9,17 @@ export function Resume() {
   const techStack = [
     {
       title: 'Languages:',
-      body: 'JavaScript, TypeScript, HTML, CSS',
+      body: 'TypeScript, JavaScript, HTML, CSS, SCSS',
     },
     {
       title: 'Frontend:',
-      body: 'React, Redux, NextJs, jQuery, Bootstrap',
+      body: 'React Js, Next Js, Vue Js, Redux, jQuery, Bootstrap, Tailwind, React Native',
       title2: 'Test:',
       body2: 'Mocha, Jest',
     },
     {
       title: 'Backend:',
-      body: 'NodeJs, ExpressJs, Axios, Nodemon, REST, GraphQL, MongoDB, PostgresSQL',
+      body: 'NodeJs, ExpressJs, Axios, Nodemon, REST, GraphQL, MongoDB, PostgresSQL, Strapi',
     }
   ]
   const openInNewTab = (url:string) => {
