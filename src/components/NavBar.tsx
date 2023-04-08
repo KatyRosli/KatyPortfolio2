@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 export function NavBar() {
@@ -27,6 +27,7 @@ export function NavBar() {
             <li><NavLink className='navbar__items__link' to='/resume'>Resume</NavLink></li>
             <li><HashLink className='navbar__items__link' to='/resume#contact'
             scroll={(el: HTMLElement) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}>Contact</HashLink></li>
+            <li><a className='navbar__items__link' href='https://www.codewithkatyrosli.com/blog' target='_blank' rel='noopener noreferrer'>Blog</a></li>
             </ol>
             </ul>
         </nav>
