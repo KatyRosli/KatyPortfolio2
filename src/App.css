@@ -401,6 +401,16 @@
   margin-bottom: 56px;
 }
 
+#bootstrap-overrides .form__message {
+  font-family: var(--body-font);
+  padding-bottom: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  color: var(--secondary-color);
+}
+
 #bootstrap-overrides .footer__line {
   color: var(--text-color);
 }
