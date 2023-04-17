@@ -408,7 +408,7 @@
   font-weight: 400;
   text-align: center;
   margin: 0;
-  color: var(--secondary-color);
+  color: green;
 }
 
 #bootstrap-overrides .footer__line {

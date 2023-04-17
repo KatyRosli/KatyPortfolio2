@@ -14,6 +14,7 @@ export function Contact() {
     emailjs.sendForm('service_ljqlf28', 'template_fye02wi', form.current, 't_lIr25-4DnNdT2bQ')
       .then(() => {
           setMessage('Thank you for your message! I will get back to you soon.');
+          form.current?.reset();
       }, () => {
           setMessage('Oops, please fill in all of the input fields.');
       });
