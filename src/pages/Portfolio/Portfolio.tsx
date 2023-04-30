@@ -21,9 +21,22 @@ import MusicPlayerApp from '../../assets/images/MusicPlayerTsxApp.png';
 import TinyMusicPlayerApp from '../../assets/images/TinyMusicPlayerTsxApp.jpg';
 import NextJsGeoGameApp from '../../assets/images/NextJsGeoGameApp.png';
 import TinyNextJsGeoGameApp from '../../assets/images/TinyNextJsGeoGameApp.jpg';
+import NextJsNodeJsBlog from '../../assets/images/NextJs&NodeJsBlog.png';
+import TinyNextJsNodeJsBlog from '../../assets/images/TinyNextJs&NodeJsBlog.jpg';
 
 export function Portfolio() {
   const projects = [
+    {
+      image: NextJsNodeJsBlog,
+      tiny: TinyNextJsNodeJsBlog,
+      alt: 'CodeWithKatyRosli',
+      title: 'FullStack Blog',
+      tags: 'Next Js, TypeScript, Tailwind, Node Js, Vercel, Heroku, AWS',
+      button: 'Visit Github',
+      github: 'https://github.com/KatyRosli/blog', 
+      button2: 'Visit Website',
+      website: 'https://www.codewithkatyrosli.com/blog',
+    },
     {
       image: NextJsGeoGameApp,
       tiny: TinyNextJsGeoGameApp,
