@@ -23,9 +23,22 @@ import NextJsGeoGameApp from '../../assets/images/NextJsGeoGameApp.png';
 import TinyNextJsGeoGameApp from '../../assets/images/TinyNextJsGeoGameApp.jpg';
 import NextJsNodeJsBlog from '../../assets/images/NextJs&NodeJsBlog.png';
 import TinyNextJsNodeJsBlog from '../../assets/images/TinyNextJs&NodeJsBlog.jpg';
+import FullStackSaltHub from '../../assets/images/FullStackSaltHub.png';
+import TinyFullStackSaltHub from '../../assets/images/TinyFullStackSaltHub.jpg';
 
 export function Portfolio() {
   const projects = [
+    {
+      image: FullStackSaltHub,
+      tiny: TinyFullStackSaltHub,
+      alt: 'SaltHub - work with BE',
+      title: 'SaltHub - work with BE',
+      tags: 'Next Js, TypeScript, Bootstrap, Vercel, ASP.NET WebApi, SQL Server, Azure',
+      button: 'View Code',
+      github: 'https://www.codewithkatyrosli.com/blog/building-salt-hub-importance-of-usability-testing-for-a-better-user-experience', 
+      button2: 'Learn More',
+      website: 'https://www.codewithkatyrosli.com/blog/building-salt-hub-an-agile-approach-to-development-team-with-two-week-sprints',
+    },
     {
       image: NextJsNodeJsBlog,
       tiny: TinyNextJsNodeJsBlog,
