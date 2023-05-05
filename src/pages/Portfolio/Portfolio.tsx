@@ -25,6 +25,8 @@ import NextJsNodeJsBlog from '../../assets/images/NextJs&NodeJsBlog.png';
 import TinyNextJsNodeJsBlog from '../../assets/images/TinyNextJs&NodeJsBlog.jpg';
 import FullStackSaltHub from '../../assets/images/FullStackSaltHub.png';
 import TinyFullStackSaltHub from '../../assets/images/TinyFullStackSaltHub.jpg';
+import AngularTicTacToe from '../../assets/images/AngularTicTacToe.png';
+import TinyAngularTicTacToe from '../../assets/images/TinyAngularTicTacToe.jpg';
 
 export function Portfolio() {
   const projects = [
@@ -60,6 +62,17 @@ export function Portfolio() {
       github: 'https://github.com/KatyRosli/game', 
       button2: 'Visit Website',
       website: 'https://chimerical-meringue-763758.netlify.app',
+    },
+    {
+      image: AngularTicTacToe,
+      tiny: TinyAngularTicTacToe,
+      alt: 'Angular Tic Tac Toe',
+      title: 'Angular Tic Tac Toe',
+      tags: 'Angular, TypeScript, HTML, CSS, Jasmin, Karma',
+      button: 'Visit Github',
+      github: 'https://github.com/KatyRosli/tictactoeAngular', 
+      button2: 'Visit Website',
+      website: 'https://tictactoeangular-7247c.web.app/',
     },
     {
       image: MusicPlayerApp,
