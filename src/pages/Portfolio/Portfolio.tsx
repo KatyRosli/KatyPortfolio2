@@ -68,7 +68,7 @@ export function Portfolio() {
       tiny: TinyAngularTicTacToe,
       alt: 'Angular Tic Tac Toe',
       title: 'Angular Tic Tac Toe',
-      tags: 'Angular, TypeScript, HTML, CSS, Jasmin, Karma',
+      tags: 'Angular, TypeScript, HTML, CSS, Jasmine, Karma',
       button: 'Visit Github',
       github: 'https://github.com/KatyRosli/tictactoeAngular', 
       button2: 'Visit Website',
