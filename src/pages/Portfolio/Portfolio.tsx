@@ -37,7 +37,7 @@ export function Portfolio() {
       title: 'SaltHub - work with BE',
       tags: 'Next Js, TypeScript, Bootstrap, Vercel, ASP.NET WebApi, SQL Server, Azure',
       button: 'View Code',
-      github: 'https://www.codewithkatyrosli.com/blog/building-salt-hub-importance-of-usability-testing-for-a-better-user-experience', 
+      github: 'https://codewithkatyrosli.com/blog/building-salt-hub-my-experience-converting-a-java-script-codebase-to-type-script', 
       button2: 'Learn More',
       website: 'https://www.codewithkatyrosli.com/blog/building-salt-hub-an-agile-approach-to-development-team-with-two-week-sprints',
     },
