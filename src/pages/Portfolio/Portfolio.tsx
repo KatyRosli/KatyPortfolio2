@@ -159,6 +159,9 @@ export function Portfolio() {
   return (
     <section className='portfolio'>
       <h2 className='portfolio__title'>Portfolio</h2>
+      <p className='portfolio__description'>In my portfolio here, I take pride in highlighting that each project has been independently developed by me from scratch, 
+      showcasing my skills and expertise. However, it is important to note that the project named Salthub represents my current job, 
+      where I actively contribute and collaborate with a team to accomplish its goals.</p>
       <Row xs={1} md={2} lg={3} className='g-4'>
         {projects.map((element, idx) => (
           <Col id='portfolio' key={idx}>
