@@ -11,17 +11,17 @@ export function Resume() {
   const techStack = [
     {
       title: 'Languages:',
-      body: 'TypeScript, JavaScript, HTML, CSS, SCSS',
+      body: 'TypeScript, JavaScript, Java, Python, CSS, SCSS',
     },
     {
       title: 'Frontend:',
-      body: 'React Js, Next Js, Vue Js, Redux, jQuery, Bootstrap, Tailwind, React Native',
+      body: 'React Js, Next Js, Vue Js, Angular, Redux, jQuery, Bootstrap, Tailwind, React Native',
       title2: 'Test:',
-      body2: 'Mocha, Jest',
+      body2: 'Mocha, Jest, Jasmine, Karma',
     },
     {
       title: 'Backend:',
-      body: 'NodeJs, ExpressJs, Axios, Nodemon, REST, GraphQL, MongoDB, PostgresSQL, Strapi',
+      body: 'NodeJs, ExpressJs, Axios, Nodemon, REST, GraphQL, MongoDB, PostgresSQL, Strapi, Sanity',
     }
   ]
   const openInNewTab = (url:string) => {

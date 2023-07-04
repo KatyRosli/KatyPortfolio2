@@ -11,7 +11,7 @@ export function Home() {
       <header className='header'>
         <h1 className='header__title'>Hi,<br/>I'm Katy Rosli.</h1>
         <h2 className='header__body'>Experienced Frontend Developer | Fullstack Developer</h2>
-        <p className='header__content'>ReactJS .  TypeScript  .  JavaScript .  NextJs  . CSS  .  Node.js . React Native</p>
+        <p className='header__content'>ReactJS .  TypeScript  .  JavaScript .  NextJs  .  Angular  . CSS  .  Node.js . React Native</p>
         <HashLink to='/#portfolio' scroll={(el: HTMLElement) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}>
           <Button className='button header__button header__button--primary' onClick={() => gaEventTracker('buttonClick', 'View Portfolio')}>View Portfolio</Button>
           </HashLink>
