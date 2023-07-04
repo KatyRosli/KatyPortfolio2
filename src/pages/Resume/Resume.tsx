@@ -4,8 +4,10 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { Contact } from '../Contact/Contact';
+import useAnalyticsEventTracker from '../../useAnalyticsEventTracker';
 
 export function Resume() {
+  const gaEventTracker = useAnalyticsEventTracker('Resume');
   const techStack = [
     {
       title: 'Languages:',
@@ -31,7 +33,10 @@ export function Resume() {
           <h2 className='resume__title'>Resume</h2>
           <p className='resume__body'>My BA Hons in Communication Design from The Glasgow School of Art, allows me to develop digital products through research and design. With 6 plus years as a UX/UI Designer, I decided to move forward to the Tech world as a Frontend Developer. <br /> 
           <br />I'm currently a Consultant Developer, based in Stockholm, Sweden. Feel free to view my resume and my tech stack below.</p>
-          <Button className='button resume__button resume__button--primary' variant='primary' onClick={() => openInNewTab('https://www.linkedin.com/in/katy-rosli-761b70185/')}>View Resume</Button>
+          <Button className='button resume__button resume__button--primary' variant='primary' onClick={() => {
+            gaEventTracker('buttonClick', 'Visit Resume LinkedIn');
+            openInNewTab('https://www.linkedin.com/in/katy-rosli-761b70185/');
+          }}>View Resume</Button>
           </aside>
           <Row xs={1} md={3} className='g-4'>
           {techStack.map((element, idx) => (

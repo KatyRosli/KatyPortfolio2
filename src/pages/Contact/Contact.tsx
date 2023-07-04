@@ -2,8 +2,10 @@ import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import useAnalyticsEventTracker from '../../useAnalyticsEventTracker';
 
 export function Contact() {
+  const gaEventTracker = useAnalyticsEventTracker('Contact');
   const emailServiceId = process.env.REACT_APP_EMAIL_SERVICE_ID || '';
   const emailTemplateId = process.env.REACT_APP_EMAIL_TEMPLATE_ID || '';
   const emailUserId = process.env.REACT_APP_EMAIL_USER_ID || '';
@@ -69,7 +71,8 @@ export function Contact() {
         <textarea placeholder="Enter message" name="message" required></textarea>
       </Form.Group>
       <aside className="contact__button">
-        <Button className="button contact__button contact__button--primary" variant="primary" type="submit" value="send">
+        <Button className="button contact__button contact__button--primary" variant="primary" type="submit" value="send"
+        onClick={() => gaEventTracker('buttonClick', 'Send Message')}>
           Send Message
         </Button>
       </aside>
