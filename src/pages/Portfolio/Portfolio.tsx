@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import useAnalyticsEventTracker from '../../useAnalyticsEventTracker';
 import ReactJsCalculatorApp from '../../assets/images/ReactJsCalculatorApp.png';
 import TinyReactJsCalculatorApp from '../../assets/images/TinyReactJsCalculatorApp.jpg';
 import ReactJsDictionaryApp from '../../assets/images/ReactJsDictionaryApp.png';
@@ -29,6 +30,7 @@ import AngularTicTacToe from '../../assets/images/AngularTicTacToe.png';
 import TinyAngularTicTacToe from '../../assets/images/TinyAngularTicTacToe.jpg';
 
 export function Portfolio() {
+  const gaEventTracker = useAnalyticsEventTracker('Portfolio');
   const projects = [
     {
       image: FullStackSaltHub,
@@ -175,8 +177,14 @@ export function Portfolio() {
               <Card.Title className='card__title'>{element.title}</Card.Title>
               <Card.Text className='card__tags'>{element.tags}</Card.Text>
               <aside className='card__buttons'>
-              <Button className='button card__button card__button--secondary' variant='outline-primary' onClick={() => openInNewTab(element.github)}>{element.button}</Button>
-              <Button className='button card__button card__button--primary' variant='primary' onClick={() => openInNewTab(element.website)}>{element.button2}</Button>
+              <Button className='button card__button card__button--secondary' variant='outline-primary' onClick={() => {
+                gaEventTracker('buttonClick', 'Visit Github');
+                openInNewTab(element.github);
+              }}>{element.button}</Button>
+              <Button className='button card__button card__button--primary' variant='primary' onClick={() => {
+                gaEventTracker('buttonClick', 'Visit Website');
+                openInNewTab(element.website);
+              }}>{element.button2}</Button>
               </aside>
               </Card.Body>
           </Card>
