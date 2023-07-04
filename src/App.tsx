@@ -8,7 +8,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactGA from 'react-ga';
 
-const TRACKING_ID = process.env.REACT_APP_GOOGLE_TRACKING_ID || '';
+const TRACKING_ID = "UA-263832841-1";
 ReactGA.initialize(TRACKING_ID);
 
 export default function App() {
