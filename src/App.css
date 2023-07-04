@@ -237,7 +237,7 @@
   font-size: 16px;
 }
 
-#bootstrap-overrides .card__button--primary {
+#bootstrap-overrides .card__button--primary, .cookie-button {
   background: var(--primary-color);
   color: var(--text-color);
   border-radius: 40px;
@@ -247,7 +247,7 @@
   transition-duration: 0.3s;
 }
 
-#bootstrap-overrides .card__button--primary:hover {
+#bootstrap-overrides .card__button--primary:hover, .cookie-button:hover {
   background: var(--primary-hover);
   color: var(--text-color);
   border-radius: 40px;
@@ -428,6 +428,20 @@
   font-family: var(--body-font);
   font-size: 12px;
   font-weight: 300;
+}
+
+.cookie-consent-banner {
+  position: sticky;
+  bottom: 0;
+  background-color: var(--text-color);
+  color: var(--primary-hover);
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.cookie-text {
+  padding: 8px 24px 0 0;
 }
 
 @media (min-width: 320px) {
