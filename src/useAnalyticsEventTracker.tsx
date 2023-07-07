@@ -1,7 +1,9 @@
 import ReactGA from "react-ga";
 
-const useAnalyticsEventTracker = (category="Portfolio Website") => {
-  const eventTracker = (action = "test action", label = "test label") => {
+type AnalyticsEventTracker = (action?: string, label?: string) => void;
+
+const useAnalyticsEventTracker = (category = "Portfolio Website"): AnalyticsEventTracker => {
+  const eventTracker: AnalyticsEventTracker = (action = "test action", label = "test label") => {
     ReactGA.event({category, action, label});
   }
   return eventTracker;

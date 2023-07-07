@@ -19,9 +19,18 @@ export function NavBar() {
       changeBackground()
       window.addEventListener("scroll", changeBackground);
     }, []);
+
+    const customScroll = (el: HTMLElement) => {
+      const offset = el.getBoundingClientRect().top -56;
+      window.scrollTo({
+        top: window.scrollY + offset,
+        behavior: 'smooth',
+      });
+      window.location.hash = el.getAttribute('id') || '';
+    };
     
     return (
-        <nav className={navbar ? 'navbar__active' : 'navbar'}>
+        <nav className={navbar ? 'navbar__active' : 'navbar'} data-testid="navbar">
             <ul className='navbar__container'>
             <li>
               <NavLink 
@@ -30,10 +39,13 @@ export function NavBar() {
             <ol className='navbar__items'>
             <li>
               <HashLink 
-                className='navbar__items__link' 
+                className='navbar__items__link'
                 to='/#portfolio'
-                scroll={(el: HTMLElement) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}
-                onClick={() => gaEventTracker('buttonClick', 'Visit Katy Portfolio Page')}>Portfolio</HashLink></li>
+                scroll={(el: HTMLElement) =>
+                  el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }
+                onClick={() => gaEventTracker('buttonClick', 'Visit Katy Portfolio Page')}
+              >Portfolio</HashLink></li>
             <li>
               <NavLink 
                 className='navbar__items__link' 
@@ -43,7 +55,7 @@ export function NavBar() {
               <HashLink 
                 className='navbar__items__link' 
                 to='/resume#contact'
-                scroll={(el: HTMLElement) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}
+                scroll={customScroll}
                 onClick={() => gaEventTracker('buttonClick', 'Visit Katy Contact Page')}
                 >Contact</HashLink></li>
             <li>
