@@ -40,7 +40,6 @@ export function Contact() {
       setMessage('Thank you for your message! I will get back to you soon.');
       form.current.reset();
     } catch (error) {
-      console.log (process.env.REACT_APP_EMAIL_SERVICE_ID, 'test' )
       setMessage('Oops, please fill in all of the input fields.');
     }
   };
@@ -51,7 +50,7 @@ export function Contact() {
       <p className="form__body">
         If you have a project that you need coded, please don't hesitate to contact me.
       </p>
-      {message && <p className="form__message">{message}</p>}
+      {message && <p className="form__message" data-testid="form-error-message">{message}</p>}
       <Form.Group className="mb-3" controlId="formName">
         <Form.Label className="form__label">Name</Form.Label>
         <Form.Control className="form__control" type="text" placeholder="Enter name" name="user_name" required />
@@ -79,4 +78,3 @@ export function Contact() {
     </Form>
   );
 }
-

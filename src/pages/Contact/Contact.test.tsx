@@ -17,5 +17,17 @@ describe('Contact', () => {
       await waitFor(() => {
         expect(screen.getByText('Please enter a valid email address.')).toBeInTheDocument();
       });
-    });   
+    });  
+
+    it('should display an error message when all input fields are not filled', async () => {
+      render(<Contact />);
+      
+      const submitButton = screen.getByRole('button', { name: /send message/i });
+      
+      fireEvent.click(submitButton);
+      
+      await waitFor(() => {
+        expect(screen.getByTestId('form-error-message')).toBeInTheDocument();
+      });
+    });    
 });      
