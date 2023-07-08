@@ -159,8 +159,8 @@ export function Portfolio() {
   };
 
   return (
-    <section className='portfolio'>
-      <h2 className='portfolio__title'>Portfolio</h2>
+    <section className='portfolio' data-testid="portfolio-section">
+      <h2 className='portfolio__title' data-testid="portfolio-title">Portfolio</h2>
       <p className='portfolio__description'>In my portfolio here, I take pride in highlighting that each project has been independently developed by me from scratch, 
       showcasing my skills and expertise. However, it is important to note that the project named Salthub represents my previous job, 
       where I actively contribute and collaborate with a team to accomplish its goals.</p>

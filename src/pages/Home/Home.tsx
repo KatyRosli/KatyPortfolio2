@@ -9,11 +9,11 @@ export function Home() {
     return (
     <main>
       <header className='header'>
-        <h1 className='header__title'>Hi,<br/>I'm Katy Rosli.</h1>
-        <h2 className='header__body'>Experienced Frontend Developer | Fullstack Developer</h2>
-        <p className='header__content'>ReactJS .  TypeScript  .  JavaScript .  NextJs  .  Angular  . CSS  .  Node.js . React Native</p>
+        <h1 className='header__title' data-testid="header-title">Hi,<br/>I'm Katy Rosli.</h1>
+        <h2 className='header__body' data-testid="header-body">Experienced Frontend Developer | Fullstack Developer</h2>
+        <p className='header__content' data-testid="header-content">ReactJS .  TypeScript  .  JavaScript .  NextJs  .  Angular  . CSS  .  Node.js . React Native</p>
         <HashLink to='/#portfolio' scroll={(el: HTMLElement) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}>
-          <Button className='button header__button header__button--primary' onClick={() => gaEventTracker('buttonClick', 'View Portfolio')}>View Portfolio</Button>
+          <Button data-testid="view-portfolio-button" className='button header__button header__button--primary' onClick={() => gaEventTracker('buttonClick', 'View Portfolio')}>View Portfolio</Button>
           </HashLink>
       </header>
       <Portfolio />
