@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import { Portfolio } from './Portfolio';
 
 describe('Portfolio', () => {
@@ -14,26 +14,49 @@ describe('Portfolio', () => {
     expect(portfolioDescription).toBeInTheDocument();
     });
 
-/*     test('renders project cards with correct information', () => {
+    test('renders project cards with correct information', () => {
     render(<Portfolio />);
 
-    const projectCards = screen.getAllByRole('article');
-    
+    const projectCards = screen.getAllByTestId('portfolio-card');
+    const projectImages = screen.getAllByTestId('card-image');
+    const projectTitles = screen.getAllByTestId('card-title');
+    const projectTags = screen.getAllByTestId('card-tags');
+    const projectButton1 = screen.getAllByTestId('button-secondary');
+    const projectButton2 = screen.getAllByTestId('button-primary');
+
     expect(projectCards).toHaveLength(11);
+    expect(projectImages).toHaveLength(11);
+    expect(projectTitles).toHaveLength(11);
+    expect(projectTags).toHaveLength(11);
+    expect(projectButton1).toHaveLength(11);
+    expect(projectButton2).toHaveLength(11);
+    });
 
+/*     test('opens GitHub link in a new tab when View Code button is clicked', () => {
+        render(<Portfolio />);
+      
+        const firstProjectCard = screen.getAllByTestId('portfolio-card')[0];
+        const viewCodeButton = within(firstProjectCard).getByText('View Code');
+        const githubLink = projects[0].github;
+      
+        const openInNewTabSpy = jest.spyOn(window, 'open');
+        viewCodeButton.click();
+      
+        expect(openInNewTabSpy).toHaveBeenCalledWith(githubLink, '_blank', 'noreferrer');
+        openInNewTabSpy.mockRestore();
+      });
 
-    const firstProjectCard = projectCards[0];
-    const firstProjectImage = screen.getByAltText('SaltHub - work with BE');
-    const firstProjectTitle = screen.getByText('SaltHub - work with BE');
-    const firstProjectTags = screen.getByText('Next Js, TypeScript, Bootstrap, Vercel, ASP.NET WebApi, SQL Server, Azure');
-    const firstProjectButton1 = screen.getByText('View Code');
-    const firstProjectButton2 = screen.getByText('Learn More');
-
-    expect(firstProjectCard).toBeInTheDocument();
-    expect(firstProjectImage).toBeInTheDocument();
-    expect(firstProjectTitle).toBeInTheDocument();
-    expect(firstProjectTags).toBeInTheDocument();
-    expect(firstProjectButton1).toBeInTheDocument();
-    expect(firstProjectButton2).toBeInTheDocument();
-    }); */
+      test('opens website link in a new tab when Visit Website button is clicked', () => {
+        render(<Portfolio />);
+      
+        const firstProjectCard = screen.getAllByTestId('portfolio-card')[0];
+        const visitWebsiteButton = within(firstProjectCard).getByText('Visit Website');
+        const websiteLink = projects[0].website;
+      
+        const openInNewTabSpy = jest.spyOn(window, 'open');
+        visitWebsiteButton.click();
+      
+        expect(openInNewTabSpy).toHaveBeenCalledWith(websiteLink, '_blank', 'noreferrer');
+        openInNewTabSpy.mockRestore();
+      }); */
 });

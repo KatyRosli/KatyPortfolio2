@@ -167,21 +167,21 @@ export function Portfolio() {
       <Row xs={1} md={2} lg={3} className='g-4'>
         {projects.map((element, idx) => (
           <Col id='portfolio' key={idx}>
-          <Card className='card'>
+          <Card className='card' data-testid="portfolio-card">
             <Card.Body className='card__container'>
               <Row>
-            <LazyLoadImage className='img-fluid' variant='top' src={element.image} alt={element.alt} placeholderSrc={element.tiny} effect='blur'/> 
+            <LazyLoadImage className='img-fluid' data-testid="card-image" variant='top' src={element.image} alt={element.alt} placeholderSrc={element.tiny} effect='blur'/> 
               </Row>
               </Card.Body>
             <Card.Body className='card__body'>
-              <Card.Title className='card__title'>{element.title}</Card.Title>
-              <Card.Text className='card__tags'>{element.tags}</Card.Text>
+              <Card.Title className='card__title' data-testid="card-title">{element.title}</Card.Title>
+              <Card.Text className='card__tags' data-testid="card-tags">{element.tags}</Card.Text>
               <aside className='card__buttons'>
-              <Button className='button card__button card__button--secondary' variant='outline-primary' onClick={() => {
+              <Button className='button card__button card__button--secondary' data-testid="button-secondary" variant='outline-primary' onClick={() => {
                 gaEventTracker('buttonClick', 'Visit Github');
                 openInNewTab(element.github);
               }}>{element.button}</Button>
-              <Button className='button card__button card__button--primary' variant='primary' onClick={() => {
+              <Button className='button card__button card__button--primary' data-testid="button-primary" variant='primary' onClick={() => {
                 gaEventTracker('buttonClick', 'Visit Website');
                 openInNewTab(element.website);
               }}>{element.button2}</Button>
