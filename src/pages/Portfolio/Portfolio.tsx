@@ -41,7 +41,7 @@ export function Portfolio() {
       button: 'View Code',
       github: 'https://codewithkatyrosli.com/blog/building-salt-hub-my-experience-converting-a-java-script-codebase-to-type-script', 
       button2: 'Learn More',
-      website: 'https://www.codewithkatyrosli.com/blog/building-salt-hub-an-agile-approach-to-development-team-with-two-week-sprints',
+      website: 'https://codewithkatyrosli.com/blog/building-salt-hub-how-using-react-icons-streamlined-our-frontend-development-workflow',
     },
     {
       image: NextJsNodeJsBlog,
