@@ -35,6 +35,7 @@ export function NavBar() {
             <li>
               <NavLink 
                 className='navbar__logo' to='/' 
+                data-testid="home"
                 onClick={() => gaEventTracker('buttonClick', 'Visit Katy Home Page')}>Katy</NavLink></li>
             <ol className='navbar__items'>
             <li>

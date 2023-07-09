@@ -45,9 +45,9 @@ export default function App() {
         <Footer />
       </Router>
       {!cookieConsent && (
-        <div className='cookie-consent-banner'>
+        <div className='cookie-consent-banner' data-testid="cookie-consent-banner">
           <p className='cookie-text'>This website uses cookies to enchance the user experience.</p>
-          <button className='cookie-button' onClick={handleAccept}>I understand</button>
+          <button className='cookie-button' onClick={handleAccept} data-testid="cookie-accept-button">I understand</button>
         </div>
       )}
     </main>
