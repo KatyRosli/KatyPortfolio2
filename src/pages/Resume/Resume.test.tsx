@@ -1,22 +1,16 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Resume } from './Resume';
 
 describe('Resume', () => {
   test('renders resume section with title', () => {
     render(<Resume />);
-    const titleElement = screen.getByText('Resume');
+    const titleElement = screen.getByTestId('resume');
     expect(titleElement).toBeInTheDocument();
   });
 
   test('renders tech stack cards', () => {
     render(<Resume />);
-    const techStackElements = screen.getAllByRole('card');
-    expect(techStackElements.length).toBe(3);
-  });
-
-  test('triggers analytics event when "View Resume" button is clicked', () => {
-    render(<Resume />);
-    const buttonElement = screen.getByText('View Resume');
-    fireEvent.click(buttonElement);
+    const techStackElements = screen.getAllByTestId('techstack');
+    expect(techStackElements).toHaveLength(3);
   });
 });

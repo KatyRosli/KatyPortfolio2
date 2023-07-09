@@ -28,7 +28,7 @@ export function Resume() {
     window.open(url, '_blank', 'noreferrer');
   };
     return (
-      <section className='resume' id='resume'>
+      <section className='resume' data-testid="resume" id='resume'>
         <aside className='resume__container'>
           <h2 className='resume__title'>Resume</h2>
           <p className='resume__body'>My BA Hons in Communication Design from The Glasgow School of Art, allows me to develop digital products through research and design. With more than 7 plus years as a UX/UI Designer, I decided to move forward to the Tech world as a Frontend Developer. <br /> 
@@ -41,7 +41,7 @@ export function Resume() {
           <Row xs={1} md={3} className='g-4'>
           {techStack.map((element, idx) => (
             <Col key={idx}>
-              <Card className='techstack'>
+              <Card className='techstack' data-testid="techstack">
                 <Card.Body className='techstack__container'>
                   <Card.Title className='techstack__title'>{element.title}</Card.Title>
                   <Card.Text className='techstack__body'>{element.body}</Card.Text>
