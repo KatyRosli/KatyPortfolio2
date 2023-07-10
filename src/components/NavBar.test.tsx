@@ -32,65 +32,6 @@ it('renders the NavBar component', () => {
     expect(blogLink).toBeInTheDocument();
 });
 
-/* it('navigates to the correct page when a link is clicked', () => {
-    render(
-        <HashRouter>
-        <NavBar />
-        </HashRouter>
-    );
-
-    const portfolioLink = screen.getByText('Portfolio');
-    const resumeLink = screen.getByText('Resume');
-    const contactLink = screen.getByText('Contact');
-    const blogLink = screen.getByText('Blog');
-
-    window.location.assign('/');
-
-    fireEvent.click(portfolioLink);
-    Object.defineProperty(window, 'location', {
-        value: {
-          ...window.location,
-          pathname: '/',
-          hash: '#portfolio',
-        },
-        writable: true,
-      });
-    expect(window.location.hash).toBe('#portfolio');
-
-    fireEvent.click(resumeLink);
-    Object.defineProperty(window, 'location', {
-        value: {
-          ...window.location,
-          pathname: '/resume',
-          hash: '',
-        },
-        writable: true,
-      });
-    expect(window.location.pathname).toBe('/resume');
-
-    fireEvent.click(contactLink);
-    Object.defineProperty(window, 'location', {
-        value: {
-          ...window.location,
-          pathname: '/resume',
-          hash: '#contact',
-        },
-        writable: true,
-      });
-    expect(window.location.pathname).toBe('/resume');
-    expect(window.location.hash).toBe('#contact');
-
-    fireEvent.click(blogLink);
-    Object.defineProperty(window, 'location', {
-        value: {
-            ...window.location,
-            href: 'https://www.codewithkatyrosli.com/blog',
-        },
-        writable: true,
-    });
-    expect(window.location.href).toBe('https://www.codewithkatyrosli.com/blog');
-}); */
-
 it('updates the navbar style on scroll', () => {
     render(
         <HashRouter>

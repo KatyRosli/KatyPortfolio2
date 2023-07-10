@@ -1,6 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Footer } from './Footer';
-import userEvent from '@testing-library/user-event';
 import useAnalyticsEventTracker from '../useAnalyticsEventTracker';
 
 jest.mock('../useAnalyticsEventTracker', () => {
@@ -39,46 +38,6 @@ describe('Footer', () => {
         fireEvent.click(screen.getByTestId('instagram-icon'));
         expect(mockEventTracker).toHaveBeenCalledWith('buttonClick', 'Visit Instagram');
     });
-
-/*      it('should open social media links in a new tab when clicked', () => {
-        const mockOpenNewTab = jest.fn();
-        jest.spyOn(window, 'open').mockImplementation(mockOpenNewTab);
-
-        render(<Footer />);
-
-        fireEvent.click(screen.getByTestId('linkedin-icon'));
-        expect(mockOpenNewTab).toHaveBeenCalledWith(
-          'https://www.linkedin.com/in/katy-rosli-761b70185/',
-          '_blank',
-          'noreferrer'
-        );
-    
-        fireEvent.click(screen.getByTestId('github-icon'));
-        expect(mockOpenNewTab).toHaveBeenCalledWith(
-          'https://github.com/KatyRosli',
-          '_blank',
-          'noreferrer'
-        );
-    
-        fireEvent.click(screen.getByTestId('behance-icon'));
-        expect(mockOpenNewTab).toHaveBeenCalledWith(
-          'https://www.behance.net/KatyLii',
-          '_blank',
-          'noreferrer'
-        );
-    
-        fireEvent.click(screen.getByTestId('instagram-icon'));
-        expect(mockOpenNewTab).toHaveBeenCalledWith(
-          'https://www.instagram.com/katy.rosli/',
-          '_blank',
-          'noreferrer'
-        );
-
-        afterEach(() => {
-        window.open.mockRestore();
-        });
-
-    }); */
 
     it('should render the correct copyright text', () => {
         render(<Footer />);
