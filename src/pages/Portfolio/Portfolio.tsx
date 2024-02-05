@@ -28,10 +28,24 @@ import FullStackSaltHub from '../../assets/images/FullStackSaltHub.png';
 import TinyFullStackSaltHub from '../../assets/images/TinyFullStackSaltHub.jpg';
 import AngularTicTacToe from '../../assets/images/AngularTicTacToe.png';
 import TinyAngularTicTacToe from '../../assets/images/TinyAngularTicTacToe.jpg';
+import SaljaVirke from '../../assets/images/ReactJs_SaljaVirke.png';
+import TinySaljaVirke from '../../assets/images/TinyReactJs_SaljaVirke.jpg';
+
 
 export function Portfolio() {
   const gaEventTracker = useAnalyticsEventTracker('Portfolio');
   const projects = [
+    {
+      image: SaljaVirke,
+      tiny: TinySaljaVirke,
+      alt: 'Virkesborsen - Salja Virke',
+      title: 'UX & Frontend',
+      tags: 'React Js, JavaScript, Bootstrap, Django, Python, AWS',
+      button: 'Read More',
+      github: 'https://codewithkatyrosli.com/blog/redesigning-the-saelj-virke-page-on-virkesborsen-a-case-study-in-user-centric-design', 
+      button2: 'Learn More',
+      website: 'https://codewithkatyrosli.com/blog/implementing-the-saelj-virke-page-insights-from-a-developer',
+    },
     {
       image: FullStackSaltHub,
       tiny: TinyFullStackSaltHub,
