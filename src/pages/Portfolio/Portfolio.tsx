@@ -30,17 +30,31 @@ import AngularTicTacToe from '../../assets/images/AngularTicTacToe.png';
 import TinyAngularTicTacToe from '../../assets/images/TinyAngularTicTacToe.jpg';
 import SaljaVirke from '../../assets/images/ReactJs_SaljaVirke.png';
 import TinySaljaVirke from '../../assets/images/TinyReactJs_SaljaVirke.jpg';
+import AdminSystem from '../../assets/images/AdminSystem.png';
+import TinyAdminSystem from '../../assets/images/TinyAdminSystem.jpg';
+
 
 
 export function Portfolio() {
   const gaEventTracker = useAnalyticsEventTracker('Portfolio');
   const projects = [
+      {
+      image: AdminSystem,
+      tiny: TinyAdminSystem,
+      alt: 'Admin - Drag and Drop',
+      title: 'Admin - Drag and Drop',
+      tags: 'React Js, JavaScript, Bootstrap, Docker, Django, Python, AWS',
+      button: 'Read More',
+      github: 'https://codewithkatyrosli.com/blog/crafting-a-seamless-admin-system-navigating-drag-and-drop-challenges', 
+      button2: 'Learn More',
+      website: 'https://codewithkatyrosli.com/blog/crafting-a-seamless-admin-system-navigating-drag-and-drop-challenges',
+    },
     {
       image: SaljaVirke,
       tiny: TinySaljaVirke,
       alt: 'Virkesborsen - Salja Virke',
       title: 'UX & Frontend',
-      tags: 'React Js, JavaScript, Bootstrap, Django, Python, AWS',
+      tags: 'React Js, JavaScript, Bootstrap, Django, Python, PostgreSQL, AWS',
       button: 'Read More',
       github: 'https://codewithkatyrosli.com/blog/redesigning-the-saelj-virke-page-on-virkesborsen-a-case-study-in-user-centric-design', 
       button2: 'Learn More',
