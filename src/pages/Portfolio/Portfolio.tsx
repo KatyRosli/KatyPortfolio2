@@ -32,19 +32,31 @@ import SaljaVirke from '../../assets/images/ReactJs_SaljaVirke.png';
 import TinySaljaVirke from '../../assets/images/TinyReactJs_SaljaVirke.jpg';
 import AdminSystem from '../../assets/images/AdminSystem.png';
 import TinyAdminSystem from '../../assets/images/TinyAdminSystem.jpg';
-
+import KartaLeafletMap from '../../assets/images/KartaPageLeafletMap.png';
+import TinyKartaLeafletMap from '../../assets/images/TinyKartaPageLeafletMap.jpg';
 
 
 export function Portfolio() {
   const gaEventTracker = useAnalyticsEventTracker('Portfolio');
   const projects = [
       {
+      image: KartaLeafletMap,
+      tiny: TinyKartaLeafletMap,
+      alt: 'Interactive Leaflet Map',
+      title: 'Interactive Leaflet Map',
+      tags: 'React Js, JavaScript, Bootstrap, DBeaver, Django, Python, AWS',
+      button: 'View Example',
+      github: 'https://codewithkatyrosli.com/blog/unleashing-leaflet-map-magic-elevating-user-experience-with-a-polished-touch', 
+      button2: 'Learn More',
+      website: 'https://codewithkatyrosli.com/blog/unleashing-leaflet-map-magic-elevating-user-experience-with-a-polished-touch',
+    },
+      {
       image: AdminSystem,
       tiny: TinyAdminSystem,
       alt: 'Admin - Drag and Drop',
       title: 'Admin - Drag and Drop',
       tags: 'React Js, JavaScript, Bootstrap, Docker, Django, Python, AWS',
-      button: 'Read More',
+      button: 'View Example',
       github: 'https://codewithkatyrosli.com/blog/crafting-a-seamless-admin-system-navigating-drag-and-drop-challenges', 
       button2: 'Learn More',
       website: 'https://codewithkatyrosli.com/blog/crafting-a-seamless-admin-system-navigating-drag-and-drop-challenges',
@@ -55,7 +67,7 @@ export function Portfolio() {
       alt: 'Virkesborsen - Salja Virke',
       title: 'UX & Frontend',
       tags: 'React Js, JavaScript, Bootstrap, Django, Python, PostgreSQL, AWS',
-      button: 'Read More',
+      button: 'View Example',
       github: 'https://codewithkatyrosli.com/blog/redesigning-the-saelj-virke-page-on-virkesborsen-a-case-study-in-user-centric-design', 
       button2: 'Learn More',
       website: 'https://codewithkatyrosli.com/blog/implementing-the-saelj-virke-page-insights-from-a-developer',
@@ -66,7 +78,7 @@ export function Portfolio() {
       alt: 'SaltHub - work with BE',
       title: 'SaltHub - work with BE',
       tags: 'Next Js, TypeScript, Bootstrap, Vercel, ASP.NET WebApi, SQL Server, Azure',
-      button: 'View Code',
+      button: 'View Example',
       github: 'https://codewithkatyrosli.com/blog/building-salt-hub-my-experience-converting-a-java-script-codebase-to-type-script', 
       button2: 'Learn More',
       website: 'https://codewithkatyrosli.com/blog/building-salt-hub-how-using-react-icons-streamlined-our-frontend-development-workflow',
