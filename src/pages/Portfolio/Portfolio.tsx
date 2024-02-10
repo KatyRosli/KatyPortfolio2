@@ -46,7 +46,7 @@ export function Portfolio() {
       title: 'Interactive Leaflet Map',
       tags: 'React Js, JavaScript, Bootstrap, DBeaver, Django, Python, AWS',
       button: 'View Example',
-      github: 'https://codewithkatyrosli.com/blog/unleashing-leaflet-map-magic-elevating-user-experience-with-a-polished-touch', 
+      github: 'https://codewithkatyrosli.com/blog/leaflet-map-adding-drawing-functionality', 
       button2: 'Learn More',
       website: 'https://codewithkatyrosli.com/blog/unleashing-leaflet-map-magic-elevating-user-experience-with-a-polished-touch',
     },
