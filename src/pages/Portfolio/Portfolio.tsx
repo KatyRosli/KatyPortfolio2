@@ -34,11 +34,24 @@ import AdminSystem from '../../assets/images/AdminSystem.png';
 import TinyAdminSystem from '../../assets/images/TinyAdminSystem.jpg';
 import KartaLeafletMap from '../../assets/images/KartaPageLeafletMap.png';
 import TinyKartaLeafletMap from '../../assets/images/TinyKartaPageLeafletMap.jpg';
+import AdminCMS from '../../assets/images/AdminCMS.png';
+import TinyAdminCMS from '../../assets/images/TinyAdminCMS.jpg';
 
 
 export function Portfolio() {
   const gaEventTracker = useAnalyticsEventTracker('Portfolio');
   const projects = [
+    {
+      image: AdminCMS,
+      tiny: TinyAdminCMS,
+      alt: 'Content Management System',
+      title: 'Admin - CMS',
+      tags: 'React Js, JavaScript, Bootstrap, Django, Python, AWS',
+      button: 'View Example',
+      github: 'https://codewithkatyrosli.com', 
+      button2: 'Learn More',
+      website: 'https://codewithkatyrosli.com',
+    },
       {
       image: KartaLeafletMap,
       tiny: TinyKartaLeafletMap,
@@ -201,9 +214,7 @@ export function Portfolio() {
   return (
     <section className='portfolio' data-testid="portfolio-section">
       <h2 className='portfolio__title' data-testid="portfolio-title">Portfolio</h2>
-      <p className='portfolio__description' data-testid="portfolio-description">In my portfolio here, I take pride in highlighting that each project has been independently developed by me from scratch, 
-      showcasing my skills and expertise. However, it is important to note that the project named Salthub represents my previous job, 
-      where I actively contribute and collaborate with a team to accomplish its goals.</p>
+      <p className='portfolio__description' data-testid="portfolio-description">In my portfolio presented here, I meticulously display both my current and past professional endeavors. Specifically, projects labeled as 'Solo Project' signify my individual efforts, meticulously crafted from inception to completion. Each entry exemplifies my dedication, expertise, and substantial contributions throughout.</p>
       <Row xs={1} md={2} lg={3} className='g-4'>
         {projects.map((element, idx) => (
           <Col id='portfolio' key={idx}>
