@@ -36,11 +36,24 @@ import KartaLeafletMap from '../../assets/images/KartaPageLeafletMap.png';
 import TinyKartaLeafletMap from '../../assets/images/TinyKartaPageLeafletMap.jpg';
 import AdminCMS from '../../assets/images/AdminCMS.png';
 import TinyAdminCMS from '../../assets/images/TinyAdminCMS.jpg';
+import AuctionsFlow from '../../assets/images/AuctionsFlow.png';
+import TinyAuctionsFlow from '../../assets/images/TinyAuctionsFlow.jpg';
 
 
 export function Portfolio() {
   const gaEventTracker = useAnalyticsEventTracker('Portfolio');
   const projects = [
+    {
+      image: AuctionsFlow,
+      tiny: TinyAuctionsFlow,
+      alt: 'FullStack Auctions Flow Project',
+      title: 'Fullstack Auctions Flow',
+      tags: 'React Js, JavaScript, Bootstrap, Django, Python, AWS',
+      button: 'View Example',
+      github: 'https://codewithkatyrosli.com/blog/exploring-django-views-a-beginner-s-guide-to-managing-user-profiles', 
+      button2: 'Learn More',
+      website: 'https://codewithkatyrosli.com/blog/exploring-django-views-a-beginner-s-guide-to-managing-user-profiles',
+    },
     {
       image: AdminCMS,
       tiny: TinyAdminCMS,
