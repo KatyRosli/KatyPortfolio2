@@ -38,11 +38,24 @@ import AdminCMS from '../../assets/images/AdminCMS.png';
 import TinyAdminCMS from '../../assets/images/TinyAdminCMS.jpg';
 import AuctionsFlow from '../../assets/images/AuctionsFlow.png';
 import TinyAuctionsFlow from '../../assets/images/TinyAuctionsFlow.jpg';
+import NotesWithAI from '../../assets/images/NotesWithAI.png';
+import TinyNotesWithAI from '../../assets/images/TinyNotesWithAI.jpg';
 
 
 export function Portfolio() {
   const gaEventTracker = useAnalyticsEventTracker('Portfolio');
   const projects = [
+    {
+      image: NotesWithAI,
+      tiny: TinyNotesWithAI,
+      alt: 'FullStack Notes with AI',
+      title: 'Fullstack Notes with AI',
+      tags: 'Next Js, Typescript, Tailwind, Drizzle, OpenAI, Vercel',
+      button: 'View Github',
+      github: 'https://github.com/KatyRosli/AI-note-taking-assistant', 
+      button2: 'Visit Website',
+      website: 'https://www.codewithkatyrosli.com',
+    },
     {
       image: AuctionsFlow,
       tiny: TinyAuctionsFlow,
