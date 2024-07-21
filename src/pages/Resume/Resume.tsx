@@ -31,8 +31,8 @@ export function Resume() {
       <section className='resume' data-testid="resume" id='resume'>
         <aside className='resume__container'>
           <h2 className='resume__title'>Resume</h2>
-          <p className='resume__body'>My BA Hons in Communication Design from The Glasgow School of Art, allows me to develop digital products through research and design. After a decade working as a UX/UI Designer, I decided to move forward to the Tech world as a FullStack Developer. <br /> 
-          <br />I am currently employed as a Software Developer in Stockholm, Sweden. My work also involves creating intuitive and visually appealing user interfaces (UX and UI design) for web applications. Feel free to view my resume and my tech stack below.</p>
+          <p className='resume__body'>My BA Hons in Communication Design from The Glasgow School of Art, allows me to develop digital products through research and design. After a decade working as a UX/UI Designer, I decided to move forward to the Tech world as a Full-stack Developer. <br /> 
+          <br />I am currently employed as a Full-stack Developer in Stockholm, Sweden. My work also involves creating intuitive and visually appealing user interfaces (UX and UI design) for web applications. Feel free to view my resume and my tech stack below.</p>
           <Button className='button resume__button resume__button--primary' variant='primary' onClick={() => {
             gaEventTracker('buttonClick', 'Visit Resume LinkedIn');
             openInNewTab('https://www.linkedin.com/in/katy-rosli-761b70185/');
