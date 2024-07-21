@@ -54,7 +54,7 @@ export function Portfolio() {
       button: 'View Github',
       github: 'https://github.com/KatyRosli/AI-note-taking-assistant', 
       button2: 'Visit Website',
-      website: 'https://www.codewithkatyrosli.com',
+      website: 'https://codewithkatyrosli.com/blog/building-my-first-ai-note-taking-assistant-a-journey-with-next-js-type-script-and-open-ai',
     },
     {
       image: AuctionsFlow,
