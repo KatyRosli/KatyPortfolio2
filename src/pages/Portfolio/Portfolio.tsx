@@ -40,11 +40,24 @@ import AuctionsFlow from '../../assets/images/AuctionsFlow.png';
 import TinyAuctionsFlow from '../../assets/images/TinyAuctionsFlow.jpg';
 import NotesWithAI from '../../assets/images/NotesWithAI.png';
 import TinyNotesWithAI from '../../assets/images/TinyNotesWithAI.jpg';
+import FullStackAnimationCMS from '../../assets/images/FullStackAnimationCMS.png';
+import TinyFullStackAnimationCMS from '../../assets/images/TinyFullStackAnimationCMS.png';
 
 
 export function Portfolio() {
   const gaEventTracker = useAnalyticsEventTracker('Portfolio');
   const projects = [
+    {
+      image: FullStackAnimationCMS,
+      tiny: TinyFullStackAnimationCMS,
+      alt: 'FullStack Animation CMS',
+      title: 'Fullstack Animation CMS',
+      tags: 'SvelteKit, TypeScript, GSAP, Prismic, Vercel',
+      button: 'View Github',
+      github: 'https://github.com/KatyRosli/animationWeb', 
+      button2: 'Visit Website',
+      website: 'https://animation-web-kappa.vercel.app/',
+    },
     {
       image: NotesWithAI,
       tiny: TinyNotesWithAI,
